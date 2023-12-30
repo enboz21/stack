@@ -8,22 +8,22 @@
  */
 package stack;
 
-class node {
-
-    int veri;
-    node ileri;
-
-    public node(int veri) {
-        this.veri = veri;
-        ileri = null;
-    }
-
-}
-
 /**
  * stack yapısını integer üzerinden yapar
  */
 public class integer {
+
+    class node {
+
+        int veri;
+        node ileri;
+
+        public node(int veri) {
+            this.veri = veri;
+            ileri = null;
+        }
+
+    }
 
     private node head;
     private int boyut;
@@ -34,6 +34,7 @@ public class integer {
 
     /**
      * stack in içi boşmu onu true false şeklinde döndürür
+     *
      * @return boyut(boolean)
      */
     public boolean boşmu() {
@@ -42,6 +43,7 @@ public class integer {
 
     /**
      * bu metot veriyi stack e ekler
+     *
      * @param veri
      */
     public void phus(int veri) {
@@ -55,6 +57,7 @@ public class integer {
 
     /**
      * bu metot stack den veri siler ve çarıldığı yere gönderiri
+     *
      * @return int
      */
     public int pop() {
@@ -66,6 +69,7 @@ public class integer {
 
     /**
      * bu metot stack in en tepesindeki veriyi size geri dödürür
+     *
      * @return int
      */
     public int peek() {
@@ -75,6 +79,7 @@ public class integer {
     /**
      * bu metot stack veri yapısının içindeki elaman sayısını döndürür eyer 0
      * dönerse boş demektir
+     *
      * @return int(boyut)
      */
     public int getboyut() {
