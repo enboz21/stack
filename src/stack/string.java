@@ -2,39 +2,39 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-/**
- *
- * @author enesb
- */
 package stack;
 
 class node {
 
-    int veri;
+    String veri;
     node ileri;
 
-    public node(int veri) {
+    public node(String veri) {
         this.veri = veri;
         ileri = null;
     }
 
 }
 
-/**
- * stack yapısını integer üzerinden yapar
- */
-public class integer {
 
+/**
+ *
+ * @author enesb
+ */
+public class string {
     private node head;
     private int boyut;
 
-    public integer() {
+    /**
+     * String veri tipinde stack oluşturur
+     */
+    public string() {
         head = null;
     }
 
     /**
      * stack in içi boşmu onu true false şeklinde döndürür
-     * @return boyut(boolean)
+     * @return String
      */
     public boolean boşmu() {
         return boyut == 0;
@@ -44,7 +44,7 @@ public class integer {
      * bu metot veriyi stack e ekler
      * @param veri
      */
-    public void phus(int veri) {
+    public void phus(String veri) {
         node yeni = new node(veri);
         if (!boşmu()) {
             yeni.ileri = head;
@@ -55,9 +55,9 @@ public class integer {
 
     /**
      * bu metot stack den veri siler ve çarıldığı yere gönderiri
-     * @return int
+     * @return String
      */
-    public int pop() {
+    public String pop() {
         boyut--;
         node tmp = head;
         head = tmp.ileri;
@@ -66,9 +66,9 @@ public class integer {
 
     /**
      * bu metot stack in en tepesindeki veriyi size geri dödürür
-     * @return int
+     * @return String
      */
-    public int peek() {
+    public String peek() {
         return head.veri;
     }
 
